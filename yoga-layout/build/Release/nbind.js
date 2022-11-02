@@ -48,11 +48,7 @@
       }
     }Module["arguments"] = process["argv"].slice(2);if (typeof module !== "undefined") {
       module["exports"] = Module;
-    }process["on"]("uncaughtException", function (ex) {
-      if (!(ex instanceof ExitStatus)) {
-        throw ex;
-      }
-    });Module["inspect"] = function () {
+    }Module["inspect"] = function () {
       return "[Emscripten Module object]";
     };
   } else if (ENVIRONMENT_IS_SHELL) {
